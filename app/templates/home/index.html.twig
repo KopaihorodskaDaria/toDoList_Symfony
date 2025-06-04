@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Welcome!{% endblock %}
+
+{% block body %}
+    <div class="container mt-5 text-center">
+        <h1 class="mb-4">Welcome to To-Do App ✅</h1>
+
+        <div class="d-flex justify-content-center gap-3">
+            <a href="{{ path('app_login') }}" class="btn btn-primary btn-lg">Увійти</a>
+            <a href="{{ path('app_register') }}" class="btn btn-success btn-lg">Зареєструватися</a>
+        </div>
+    </div>
+{% endblock %}
+

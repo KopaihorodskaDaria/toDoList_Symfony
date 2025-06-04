@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Your Tasks{% endblock %}
+
+{% block body %}
+    <h1>Your Tasks</h1>
+
+    {% if tasks is empty %}
+        <p>You have no tasks yet.</p>
+    {% else %}
+        <ul>
+            {% for task in tasks %}
+                <li>
+                    <strong>{{ task.title }}</strong> - {{ task.description }}
+                    {% if task.isCompleted %}
+                        (Completed)
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <a href="{{ path('app_logout') }}">Logout</a>
+{% endblock %}
+
